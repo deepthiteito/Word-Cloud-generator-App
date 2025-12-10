@@ -43,7 +43,8 @@ if uploaded_file is not None:
     clean_text = preprocess_text(text)
 
     # Tokenize
-    words = word_tokenize(clean, preserve_line=True)
+    words = word_tokenize(clean_text, preserve_line=True)   # <--- FIX
+
 
     # Remove stopwords
     stop_words = set(stopwords.words("english"))
